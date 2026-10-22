@@ -1,0 +1,863 @@
+
+/* ===========================
+   ОСНОВНЫЕ НАСТРОЙКИ
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Arial, serif;
+    text-align: center;
+}
+
+:root {
+    --bg: #ededed;
+    --text: #272727;
+    --box: #525280;
+    --border: #2c2c42;
+    --shadow: 0 5px 13px -1px rgba(0, 0, 0, 0.3);
+}
+
+html {
+    width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    overflow-x: clip;
+    scrollbar-color: var(--box) var(--bg);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    overflow-wrap: anywhere;
+}
+
+/* ===========================
+   ШАПКА
+=========================== */
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: 80px;
+    padding: 15px 45px 15px 15px;
+    background-color: var(--box);
+    color: #fff;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+header .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    left: auto;
+    color: #ff4d4d;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header strong {
+    padding: 0 5px;
+    color: #ffd700;
+    border-bottom: none;
+}
+
+/* ===========================
+   НАВИГАЦИЯ
+=========================== */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav h3 {
+    font-size: 1.1rem;
+    overflow-wrap: anywhere;
+}
+
+nav .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--box);
+}
+
+/* ===========================
+   ОСНОВНОЙ КОНТЕЙНЕР
+=========================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 0;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ===========================
+   ГЛАВНАЯ КАРТОЧКА
+=========================== */
+
+.mainbox {
+    width: 100%;
+    min-width: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.startderatribute {
+    min-width: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.startderatribute h1 {
+    font-size: 1.6rem;
+    color: var(--box);
+    overflow-wrap: anywhere;
+}
+
+.startderatribute h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #666;
+    overflow-wrap: anywhere;
+}
+
+.startderatribute ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-wrap: anywhere;
+}
+
+.startderatribute li {
+    min-width: 0;
+}
+
+.startderatribute a {
+    color: var(--box);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+/* ===========================
+   ИЗОБРАЖЕНИЕ В КАРТОЧКЕ
+=========================== */
+
+.img-wrapper {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    min-height: 0;
+}
+
+.startimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===========================
+   ЗАГОЛОВОК РАЗДЕЛА
+=========================== */
+
+.hr {
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    margin: 75px 0;
+    padding: 20px 12px;
+    font-weight: 700;
+    font-family: Oswald, Arial, sans-serif;
+    font-size: 50px;
+    line-height: 1.2;
+    background-color: var(--box);
+    color: #fff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: anywhere;
+}
+
+/* ===========================
+   ВЫДЕЛЕННЫЙ ТЕКСТ
+=========================== */
+
+strong {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+b {
+    display: inline-block;
+    color: rgb(255, 0, 0);
+    font-weight: 900;
+    padding: 35px 0 100px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* ===========================
+   ФОТО ОМБУДСМЕНА
+=========================== */
+
+.foto {
+    width: min(500px, 100%);
+    aspect-ratio: 1 / 1;
+    height: auto;
+    border-radius: 50%;
+    background-color: #272727;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 3px solid #000;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.fotocon {
+    width: 100%;
+    min-width: 0;
+}
+
+.fotocon h1 {
+    padding: 40px 8px 15px;
+    font-size: 50px;
+    overflow-wrap: anywhere;
+}
+
+.fotocon p {
+    padding: 0 5px;
+    font-size: 35px;
+    overflow-wrap: anywhere;
+}
+
+/* ===========================
+   ДОПОЛНИТЕЛЬНАЯ КАРТИНКА
+=========================== */
+
+.imguk {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 25px auto;
+    object-fit: contain;
+}
+
+/* ===========================
+   ТЕКСТ О ПРИЧИНАХ ОБРАЩЕНИЯ
+=========================== */
+
+.container > h2 {
+    font-size: 24px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* ===========================
+   СПИСОК СО СТРЕЛКАМИ
+=========================== */
+
+.strelki {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.row-item {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+}
+
+.row-item::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 10px;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, #999, #666);
+    z-index: 1;
+    clip-path: polygon(
+        0% 0%,
+        calc(100% - 25px) 0%,
+        100% 50%,
+        calc(100% - 25px) 100%,
+        0% 100%
+    );
+    opacity: 0.7;
+}
+
+.badge {
+    position: relative;
+    z-index: 3;
+    width: 120px;
+    min-width: 120px;
+    min-height: 54px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 24px;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    box-shadow:
+        inset 0 4px 8px rgba(255, 255, 255, 0.6),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    flex-shrink: 0;
+    overflow-wrap: anywhere;
+}
+
+.arrow-body {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    min-width: 0;
+    min-height: 54px;
+    height: auto;
+    margin-left: -15px;
+    padding: 12px 35px 12px 30px;
+    display: flex;
+    align-items: center;
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: #000;
+    border: 1px solid #ccc;
+    border-right: none;
+    clip-path: polygon(
+        0% 0%,
+        calc(100% - 25px) 0%,
+        100% 50%,
+        calc(100% - 25px) 100%,
+        0% 100%
+    );
+    overflow-wrap: anywhere;
+}
+
+.arrow-body > div {
+    min-width: 0;
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.arrow-body::before {
+    content: "•";
+    flex-shrink: 0;
+    font-size: 20px;
+    margin-right: 6px;
+    align-self: flex-start;
+    margin-top: -2px;
+}
+
+/* ===========================
+   ЦВЕТА СТРЕЛОК
+=========================== */
+
+/* Первая стрелка */
+
+.row-1 .badge {
+    background: linear-gradient(
+        to bottom,
+        #ffeb3b,
+        #fbc02d,
+        #f57f17
+    );
+    color: #1a237e;
+}
+
+.row-1 .arrow-body {
+    background: linear-gradient(
+        to bottom,
+        #fffde7,
+        #fff9c4
+    );
+    border-color: #fbc02d;
+    color: #000;
+}
+
+.row-1 .arrow-body::before {
+    color: #f57f17;
+}
+
+/* Вторая стрелка */
+
+.row-2 .badge {
+    background: linear-gradient(
+        to bottom,
+        #aed581,
+        #7cb342,
+        #33691e
+    );
+    color: #004d40;
+}
+
+.row-2 .arrow-body {
+    background: linear-gradient(
+        to bottom,
+        #f1f8e9,
+        #dcedc8
+    );
+    border-color: #7cb342;
+}
+
+.row-2 .arrow-body::before {
+    color: #33691e;
+}
+
+/* Третья стрелка */
+
+.row-3 .badge {
+    background: linear-gradient(
+        to bottom,
+        #2ecc71,
+        #27ae60,
+        #1e5a2f
+    );
+    color: #004d40;
+}
+
+.row-3 .arrow-body {
+    background: linear-gradient(
+        to bottom,
+        #e8f5e9,
+        #c8e6c9
+    );
+    border-color: #27ae60;
+}
+
+.row-3 .arrow-body::before {
+    color: #1e5a2f;
+}
+
+/* Четвёртая стрелка */
+
+.row-4 .badge {
+    background: linear-gradient(
+        to bottom,
+        #4dd0e1,
+        #00acc1,
+        #006064
+    );
+    color: #0d47a1;
+}
+
+.row-4 .arrow-body {
+    background: linear-gradient(
+        to bottom,
+        #e0f7fa,
+        #b2ebf2
+    );
+    border-color: #00acc1;
+}
+
+.row-4 .arrow-body::before {
+    color: #006064;
+}
+
+/* Пятая стрелка */
+
+.row-5 .badge {
+    background: linear-gradient(
+        to bottom,
+        #42a5f5,
+        #1e88e5,
+        #0d47a1
+    );
+    color: #000;
+}
+
+.row-5 .arrow-body {
+    background: linear-gradient(
+        to bottom,
+        #e3f2fd,
+        #bbdefb
+    );
+    border-color: #1e88e5;
+}
+
+.row-5 .arrow-body::before {
+    color: #0d47a1;
+}
+
+/* ===========================
+   ПОДВАЛ
+=========================== */
+
+footer {
+    margin-top: 150px;
+    min-height: 250px;
+    width: 100%;
+    background-color: var(--box);
+    border-top: 4px solid var(--border);
+}
+
+/* ===========================
+   ПЛАНШЕТЫ И ТЕЛЕФОНЫ
+=========================== */
+
+@media (max-width: 768px) {
+
+    header {
+        min-height: 60px;
+        padding: 12px 42px 12px 10px;
+        font-size: 13px;
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 14px 12px;
+        gap: 12px;
+    }
+
+    nav h3 {
+        font-size: 17px;
+    }
+
+    nav .nav-links {
+        width: 100%;
+        gap: 10px 16px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .mainbox {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .startderatribute {
+        padding: 20px 14px;
+        gap: 12px;
+    }
+
+    .startderatribute h1 {
+        font-size: 23px;
+    }
+
+    .startderatribute h2 {
+        font-size: 14px;
+    }
+
+    .startderatribute ul {
+        font-size: 14px;
+    }
+
+    .img-wrapper {
+        order: -1;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .startimg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hr {
+        min-height: 75px;
+        margin: 30px 0;
+        padding: 15px 8px;
+        font-size: clamp(21px, 6vw, 38px);
+        border-radius: 10px;
+    }
+
+    .ambu {
+        font-size: 18px;
+        line-height: 1.6;
+        font-weight: normal;
+    }
+
+    b {
+        display: block;
+        padding: 25px 0 35px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .foto {
+        width: min(300px, 85%);
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .fotocon h1 {
+        padding: 22px 8px 10px;
+        font-size: clamp(25px, 7vw, 40px);
+    }
+
+    .fotocon p {
+        font-size: 20px;
+    }
+
+    .imguk {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin: 25px auto;
+    }
+
+    .container > h2 {
+        font-size: 17px;
+        line-height: 1.7;
+        font-weight: normal;
+    }
+
+    .strelki {
+        gap: 14px;
+    }
+
+    .row-item {
+        align-items: stretch;
+    }
+
+    .row-item::before {
+        display: none;
+    }
+
+    .badge {
+        width: 76px;
+        min-width: 76px;
+        min-height: 54px;
+        padding: 8px 3px;
+        font-size: 17px;
+    }
+
+    .arrow-body {
+        flex: 1;
+        min-width: 0;
+        min-height: 70px;
+        height: auto;
+        margin-left: -8px;
+        padding: 12px 24px 12px 18px;
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    footer {
+        min-height: 120px;
+        margin-top: 50px;
+    }
+}
+
+/* ===========================
+   МАЛЕНЬКИЕ ТЕЛЕФОНЫ
+   320px – 360px
+=========================== */
+
+@media (max-width: 360px) {
+
+    header {
+        padding: 10px 38px 10px 8px;
+        font-size: 12px;
+    }
+
+    header .close-btn {
+        top: 6px;
+        right: 7px;
+        font-size: 16px;
+    }
+
+    nav {
+        padding: 12px 8px;
+        gap: 10px;
+    }
+
+    nav h3 {
+        font-size: 16px;
+    }
+
+    nav .nav-links {
+        gap: 10px 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 0 8px;
+        margin: 16px auto;
+    }
+
+    .startderatribute {
+        padding: 16px 10px;
+        gap: 10px;
+    }
+
+    .startderatribute h1 {
+        font-size: 21px;
+    }
+
+    .startderatribute h2 {
+        font-size: 13px;
+    }
+
+    .startderatribute ul {
+        font-size: 13px;
+    }
+
+    .hr {
+        min-height: 65px;
+        margin: 24px 0;
+        padding: 14px 5px;
+        font-size: 21px;
+        border-radius: 8px;
+    }
+
+    .ambu {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    b {
+        padding: 20px 0 30px;
+        font-size: 15px;
+    }
+
+    .foto {
+        width: min(250px, 85%);
+    }
+
+    .fotocon h1 {
+        padding: 20px 5px 10px;
+        font-size: 27px;
+    }
+
+    .fotocon p {
+        font-size: 17px;
+    }
+
+    .container > h2 {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .strelki {
+        gap: 12px;
+    }
+
+    .badge {
+        width: 62px;
+        min-width: 62px;
+        min-height: 50px;
+        padding: 6px 2px;
+        font-size: 15px;
+        border-radius: 6px;
+    }
+
+    .arrow-body {
+        min-height: 65px;
+        margin-left: -6px;
+        padding: 10px 20px 10px 12px;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .arrow-body::before {
+        font-size: 16px;
+        margin-right: 4px;
+    }
+
+    footer {
+        min-height: 100px;
+        margin-top: 35px;
+    }
+}
+
+/* ===========================
+   ДОСТУПНОСТЬ
+=========================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    nav a {
+        transition: none;
+    }
+}
