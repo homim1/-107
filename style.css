@@ -1,8 +1,3 @@
-
-/* ===========================
-   ОСНОВНЫЕ НАСТРОЙКИ
-=========================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -47,9 +42,12 @@ a {
     overflow-wrap: anywhere;
 }
 
-/* ===========================
-   ШАПКА
-=========================== */
+iframe{
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+    margin-top: 50px;
+}
 
 header {
     position: relative;
@@ -88,10 +86,6 @@ header strong {
     color: #ffd700;
     border-bottom: none;
 }
-
-/* ===========================
-   НАВИГАЦИЯ
-=========================== */
 
 nav {
     position: sticky;
@@ -132,10 +126,6 @@ nav a:hover {
     color: var(--box);
 }
 
-/* ===========================
-   ОСНОВНОЙ КОНТЕЙНЕР
-=========================== */
-
 .container {
     width: 100%;
     max-width: 1200px;
@@ -143,10 +133,6 @@ nav a:hover {
     margin: 40px auto;
     padding: 0 20px;
 }
-
-/* ===========================
-   ГЛАВНАЯ КАРТОЧКА
-=========================== */
 
 .mainbox {
     width: 100%;
@@ -199,10 +185,6 @@ nav a:hover {
     overflow-wrap: anywhere;
 }
 
-/* ===========================
-   ИЗОБРАЖЕНИЕ В КАРТОЧКЕ
-=========================== */
-
 .img-wrapper {
     width: 100%;
     min-width: 0;
@@ -217,9 +199,6 @@ nav a:hover {
     display: block;
 }
 
-/* ===========================
-   ЗАГОЛОВОК РАЗДЕЛА
-=========================== */
 
 .hr {
     width: 100%;
@@ -240,10 +219,6 @@ nav a:hover {
     overflow-wrap: anywhere;
 }
 
-/* ===========================
-   ВЫДЕЛЕННЫЙ ТЕКСТ
-=========================== */
-
 strong {
     color: #000;
     border-bottom: 2px solid #000;
@@ -258,9 +233,6 @@ b {
     overflow-wrap: anywhere;
 }
 
-/* ===========================
-   ФОТО ОМБУДСМЕНА
-=========================== */
 
 .foto {
     width: min(500px, 100%);
@@ -297,9 +269,6 @@ b {
     overflow-wrap: anywhere;
 }
 
-/* ===========================
-   ДОПОЛНИТЕЛЬНАЯ КАРТИНКА
-=========================== */
 
 .imguk {
     display: block;
@@ -310,9 +279,6 @@ b {
     object-fit: contain;
 }
 
-/* ===========================
-   ТЕКСТ О ПРИЧИНАХ ОБРАЩЕНИЯ
-=========================== */
 
 .container > h2 {
     font-size: 24px;
@@ -320,9 +286,6 @@ b {
     overflow-wrap: anywhere;
 }
 
-/* ===========================
-   СПИСОК СО СТРЕЛКАМИ
-=========================== */
 
 .strelki {
     width: 100%;
@@ -423,11 +386,6 @@ b {
     margin-top: -2px;
 }
 
-/* ===========================
-   ЦВЕТА СТРЕЛОК
-=========================== */
-
-/* Первая стрелка */
 
 .row-1 .badge {
     background: linear-gradient(
@@ -453,7 +411,7 @@ b {
     color: #f57f17;
 }
 
-/* Вторая стрелка */
+
 
 .row-2 .badge {
     background: linear-gradient(
@@ -478,7 +436,6 @@ b {
     color: #33691e;
 }
 
-/* Третья стрелка */
 
 .row-3 .badge {
     background: linear-gradient(
@@ -503,7 +460,7 @@ b {
     color: #1e5a2f;
 }
 
-/* Четвёртая стрелка */
+
 
 .row-4 .badge {
     background: linear-gradient(
@@ -553,9 +510,6 @@ b {
     color: #0d47a1;
 }
 
-/* ===========================
-   ПОДВАЛ
-=========================== */
 
 footer {
     margin-top: 150px;
@@ -563,6 +517,9 @@ footer {
     width: 100%;
     background-color: var(--box);
     border-top: 4px solid var(--border);
+    color: black;
+    display: grid;
+    justify-content: center;
 }
 
 /* ===========================
