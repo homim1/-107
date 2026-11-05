@@ -269,6 +269,21 @@ b {
     overflow-wrap: anywhere;
 }
 
+#gmaildimi:target ~ #fotosall #gmail {
+    background-color: #ffeb3b;
+    transition: background-color 0.5s ease;
+    padding: 10px;
+    border-radius: 5px;
+    animation: removeHighlight 3s ease forwards;
+}
+
+@keyframes removeHighlight {
+    to {
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+    }
+}
 
 .imguk {
     display: block;
@@ -485,7 +500,6 @@ b {
     color: #006064;
 }
 
-/* Пятая стрелка */
 
 .row-5 .badge {
     background: linear-gradient(
@@ -522,9 +536,6 @@ footer {
     justify-content: center;
 }
 
-/* ===========================
-   ПЛАНШЕТЫ И ТЕЛЕФОНЫ
-=========================== */
 
 @media (max-width: 768px) {
 
@@ -680,10 +691,6 @@ footer {
     }
 }
 
-/* ===========================
-   МАЛЕНЬКИЕ ТЕЛЕФОНЫ
-   320px – 360px
-=========================== */
 
 @media (max-width: 360px) {
 
@@ -805,9 +812,6 @@ footer {
     }
 }
 
-/* ===========================
-   ДОСТУПНОСТЬ
-=========================== */
 
 @media (prefers-reduced-motion: reduce) {
     html {
