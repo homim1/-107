@@ -29,7 +29,7 @@ body {
     line-height: 1.5;
     overflow-wrap: break-word;
     overflow-x: clip;
-    scrollbar-color: var(--box) var(--bg);
+    scrollbar-color: var(--box) ;
 }
 
 img {
